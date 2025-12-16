@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Campus Parking</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>🚗 Smart Campus Parking System</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <button type="submit">Enter Campus</button>
+</form>
+
+{% if plate %}
+<h3>Detected Plate: {{ plate }}</h3>
+<h3>Assigned Slot: {{ slot }}</h3>
+<img src="/static/campus_map.png" width="300">
+{% endif %}
+
+</body>
+</html>
